@@ -1,0 +1,102 @@
+{
+  "dataset": "Imagenette 2 160px (fast.ai ImageNet-derived subset)",
+  "target": "public_data/imagenette_mosaic/target/n03028079_church_target.jpg",
+  "target_label": {
+    "wnid": "n03028079",
+    "name": "church"
+  },
+  "fallback_note": null,
+  "tile_count": 108,
+  "tile_label_counts": {
+    "tench": 12,
+    "English springer": 12,
+    "cassette player": 12,
+    "chain saw": 12,
+    "French horn": 12,
+    "garbage truck": 12,
+    "gas pump": 12,
+    "golf ball": 12,
+    "parachute": 12
+  },
+  "tile_wnid_counts": {
+    "n01440764": 12,
+    "n02102040": 12,
+    "n02979186": 12,
+    "n03000684": 12,
+    "n03394916": 12,
+    "n03417042": 12,
+    "n03425413": 12,
+    "n03445777": 12,
+    "n03888257": 12
+  },
+  "grid": {
+    "cols": 48,
+    "rows": 32,
+    "cell_px": 18,
+    "output_px": [
+      864,
+      576
+    ]
+  },
+  "method": "EXIF transpose + center crop + resize only; no hue/tint/opacity color transform",
+  "avg_match_distance_rgb": 132.81,
+  "hard_match_cell_ratio": 0.7559,
+  "target_color_mix": {
+    "neutral-gray": 88,
+    "near-black": 514,
+    "blue/cool": 267,
+    "near-white": 417,
+    "red/warm": 225,
+    "warm-yellow/orange": 25
+  },
+  "tile_color_mix": {
+    "neutral-gray": 87,
+    "warm-yellow/orange": 10,
+    "red/warm": 9,
+    "blue/cool": 1,
+    "green": 1
+  },
+  "most_reused_tiles": [
+    [
+      "n03394916_french-horn_003.jpg",
+      21
+    ],
+    [
+      "n03445777_golf-ball_010.jpg",
+      20
+    ],
+    [
+      "n03425413_gas-pump_009.jpg",
+      19
+    ],
+    [
+      "n03425413_gas-pump_011.jpg",
+      18
+    ],
+    [
+      "n03425413_gas-pump_001.jpg",
+      18
+    ],
+    [
+      "n03417042_garbage-truck_003.jpg",
+      18
+    ],
+    [
+      "n02102040_english-springer_001.jpg",
+      18
+    ],
+    [
+      "n03394916_french-horn_005.jpg",
+      18
+    ],
+    [
+      "n03445777_golf-ball_002.jpg",
+      17
+    ],
+    [
+      "n03394916_french-horn_001.jpg",
+      17
+    ]
+  ],
+  "recommendation": "If hard_match_cell_ratio is high or a target_color_mix bucket is missing in tile_color_mix, generate/acquire new photos in those color families rather than recoloring existing photos."
+}

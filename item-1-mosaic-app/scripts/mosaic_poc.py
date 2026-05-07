@@ -7,12 +7,40 @@ overlay is applied. If color coverage is missing, the report calls out gaps so n
 photos/assets can be generated instead of recoloring existing memories.
 """
 from __future__ import annotations
-import argparse, json, math, pathlib, random
+import argparse, json, math, pathlib, random, re
 from collections import Counter
 from PIL import Image, ImageOps, ImageStat, ImageDraw
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 STANDARD_EXTS = {".jpg", ".jpeg", ".png"}
+
+IMAGENETTE_LABELS = {
+    "n01440764": "tench",
+    "n02102040": "English springer",
+    "n02979186": "cassette player",
+    "n03000684": "chain saw",
+    "n03028079": "church",
+    "n03394916": "French horn",
+    "n03417042": "garbage truck",
+    "n03425413": "gas pump",
+    "n03445777": "golf ball",
+    "n03888257": "parachute",
+}
+
+
+def infer_dataset_label(path: pathlib.Path) -> dict[str, str] | None:
+    """Infer an ImageNet/Imagenette class from a parent directory or copied filename.
+
+    Supports original paths such as ``val/n03028079/ILSVRC...JPEG`` and prepared
+    flat filenames such as ``n03028079_church_000.JPEG``.
+    """
+    candidates = [path.parent.name, path.name]
+    for text in candidates:
+        m = re.search(r"n\d{8}", text)
+        if m:
+            wnid = m.group(0)
+            return {"wnid": wnid, "name": IMAGENETTE_LABELS.get(wnid, "unknown")}
+    return None
 
 
 def find_standard_image(tile_dir: pathlib.Path) -> pathlib.Path | None:
@@ -86,6 +114,7 @@ def main() -> int:
     ap.add_argument("--cell", type=int, default=28)
     ap.add_argument("--max-reuse", type=int, default=0, help="0 allows reuse with soft penalty")
     ap.add_argument("--allow-fallback-target", action="store_true", help="if standard.jpg is missing, use first tile as demo target")
+    ap.add_argument("--dataset-name", default="", help="optional public dataset name to include in the JSON report")
     args = ap.parse_args()
 
     tile_dir = pathlib.Path(args.tiles)
@@ -115,7 +144,7 @@ def main() -> int:
         img = open_rgb(p)
         avg_img = crop_cover(img, cell)
         tile_cache[str(p)] = avg_img
-        tile_meta.append({"path": str(p), "name": p.name, "mean_rgb": mean_rgb(avg_img), "size": img.size})
+        tile_meta.append({"path": str(p), "name": p.name, "mean_rgb": mean_rgb(avg_img), "size": img.size, "label": infer_dataset_label(p)})
 
     out = Image.new("RGB", out_size, "white")
     usage = Counter()
@@ -150,9 +179,13 @@ def main() -> int:
     avg_distance = sum(m["distance"] for m in matches) / len(matches)
     hard_cells = [m for m in matches if m["distance"] > 95]
     report = {
+        "dataset": args.dataset_name or None,
         "target": str(target),
+        "target_label": infer_dataset_label(target),
         "fallback_note": fallback_note,
         "tile_count": len(tile_meta),
+        "tile_label_counts": Counter((m.get("label") or {}).get("name", "unlabeled") for m in tile_meta),
+        "tile_wnid_counts": Counter((m.get("label") or {}).get("wnid", "unlabeled") for m in tile_meta),
         "grid": {"cols": args.cols, "rows": rows, "cell_px": args.cell, "output_px": out_size},
         "method": "EXIF transpose + center crop + resize only; no hue/tint/opacity color transform",
         "avg_match_distance_rgb": round(avg_distance, 2),

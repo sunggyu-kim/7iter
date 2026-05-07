@@ -1,0 +1,56 @@
+{
+  "dataset": "Imagenette 2 160px validation split (fast.ai), ImageNet-derived public subset",
+  "target": {
+    "wnid": "n03028079",
+    "label": "church",
+    "count": 1
+  },
+  "tile_pool": [
+    {
+      "wnid": "n01440764",
+      "label": "tench",
+      "count": 12
+    },
+    {
+      "wnid": "n02102040",
+      "label": "English springer",
+      "count": 12
+    },
+    {
+      "wnid": "n02979186",
+      "label": "cassette player",
+      "count": 12
+    },
+    {
+      "wnid": "n03000684",
+      "label": "chain saw",
+      "count": 12
+    },
+    {
+      "wnid": "n03394916",
+      "label": "French horn",
+      "count": 12
+    },
+    {
+      "wnid": "n03417042",
+      "label": "garbage truck",
+      "count": 12
+    },
+    {
+      "wnid": "n03425413",
+      "label": "gas pump",
+      "count": 12
+    },
+    {
+      "wnid": "n03445777",
+      "label": "golf ball",
+      "count": 12
+    },
+    {
+      "wnid": "n03888257",
+      "label": "parachute",
+      "count": 12
+    }
+  ],
+  "selection_rule": "Target is the highest-detail validation image from the chosen target label; tile pool is a balanced deterministic set from every non-target Imagenette label."
+}

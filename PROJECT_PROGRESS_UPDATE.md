@@ -46,3 +46,17 @@
 - 404 원인은 `/docs` publish root 밖을 링크한 상대경로 문제로 확인 및 수정.
 
 검증 후 GitHub push 및 issue comment 업데이트 예정.
+
+
+## 2026-05-07 Item 1 ImageNet-derived Mosaic Update
+
+Issue #1 최신 comment에 따라 Drive 이미지가 아니라 라벨링된 공공 ImageNet-derived dataset으로 mosaic 결과를 생성했습니다.
+
+- Dataset: Imagenette 2 160px, fast.ai public ImageNet-derived subset
+- Target label: `n03028079 · church`
+- Tile labels: target 제외 9개 Imagenette label × 12장 = 108장
+- Web result: `docs/item1/index.html`
+- Output image: `docs/item1/assets/imagenette-mosaic-output.jpg`
+- Target image: `docs/item1/assets/imagenette-target-church.jpg`
+- Contact sheet: `docs/item1/assets/imagenette-tile-contact-sheet.jpg`
+- Repro docs: `item-1-mosaic-app/IMAGENET_DATASET_MOSAIC.md`

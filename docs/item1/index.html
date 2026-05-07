@@ -3,49 +3,66 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Item 1 — Mosaic Year Safe Web Demo</title>
+<title>Item 1 — Imagenette Label-based Mosaic</title>
 <style>
-:root{--bg:#080b12;--panel:#111827;--ink:#f8fafc;--muted:#a7b0c0;--line:#293244;--cyan:#22d3ee;--pink:#f472b6;--gold:#fbbf24;--green:#34d399}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#1e3a8a 0,#080b12 38%,#020617 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}.wrap{max-width:1120px;margin:0 auto;padding:34px 20px 80px}a{color:#67e8f9;text-decoration:none}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:46px}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(17,24,39,.72);border-radius:999px;padding:8px 12px;color:#bae6fd;font-weight:900;font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 16px;background:#e5e7eb;color:#020617;font-weight:900}.btn.dark{background:#111827;border:1px solid #334155;color:#fff}.hero{display:grid;grid-template-columns:1fr 1.04fr;gap:28px;align-items:center}@media(max-width:900px){.hero{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}h1{font-size:clamp(42px,7vw,82px);line-height:.94;letter-spacing:-.06em;margin:0 0 18px}.lead{font-size:20px;color:#cbd5e1;max-width:760px}.panel{background:linear-gradient(180deg,rgba(17,24,39,.86),rgba(2,6,23,.86));border:1px solid var(--line);border-radius:30px;padding:22px;box-shadow:0 26px 80px rgba(0,0,0,.32)}.preview{position:relative;overflow:hidden}.preview img{width:100%;display:block;border-radius:22px;border:1px solid #334155}.badge{position:absolute;left:34px;top:34px;background:rgba(2,6,23,.82);border:1px solid #475569;border-radius:999px;padding:8px 12px;font-weight:900;color:#e0f2fe}.zoom{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:14px}.zoom span{aspect-ratio:1;border-radius:6px;background:linear-gradient(135deg,var(--c1),var(--c2));transition:.2s transform}.zoom span:hover{transform:scale(1.8);z-index:1}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}@media(max-width:860px){.grid{grid-template-columns:1fr}}.card{background:rgba(17,24,39,.72);border:1px solid var(--line);border-radius:24px;padding:20px}.card h2{margin:0 0 8px;letter-spacing:-.03em}.ok{color:#86efac}.warn{color:#fde68a}.bad{color:#fecaca}.code{background:#020617;border:1px solid #334155;border-radius:18px;padding:16px;overflow:auto;color:#e2e8f0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}.footer{margin-top:48px;color:#94a3b8}.safe{border-left:4px solid var(--green)}.unsafe{border-left:4px solid #fb7185}
+:root{--bg:#080b12;--panel:#111827;--ink:#f8fafc;--muted:#a7b0c0;--line:#293244;--cyan:#22d3ee;--gold:#fbbf24;--green:#34d399;--red:#fb7185}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#1e3a8a 0,#080b12 38%,#020617 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}.wrap{max-width:1180px;margin:0 auto;padding:34px 20px 80px}a{color:#67e8f9;text-decoration:none}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:38px}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(17,24,39,.72);border-radius:999px;padding:8px 12px;color:#bae6fd;font-weight:900;font-size:13px}.hero{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:center}@media(max-width:900px){.hero{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}h1{font-size:clamp(40px,6.4vw,76px);line-height:.95;letter-spacing:-.06em;margin:0 0 18px}.lead{font-size:20px;color:#cbd5e1}.panel{background:linear-gradient(180deg,rgba(17,24,39,.86),rgba(2,6,23,.86));border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 26px 80px rgba(0,0,0,.32)}.result{position:relative}.result img{width:100%;display:block;border-radius:20px;border:1px solid #334155}.badge{position:absolute;left:34px;top:34px;background:rgba(2,6,23,.82);border:1px solid #475569;border-radius:999px;padding:8px 12px;font-weight:900;color:#e0f2fe}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}@media(max-width:860px){.grid{grid-template-columns:1fr}}.card{background:rgba(17,24,39,.72);border:1px solid var(--line);border-radius:24px;padding:20px}.card h2{margin:0 0 8px;letter-spacing:-.03em}.shot{width:100%;display:block;border-radius:16px;border:1px solid #334155;background:#020617}.split{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px;margin-top:38px}@media(max-width:860px){.split{grid-template-columns:1fr}}.code{background:#020617;border:1px solid #334155;border-radius:18px;padding:16px;overflow:auto;color:#e2e8f0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}.ok{color:#86efac}.warn{color:#fde68a}.footer{margin-top:38px;color:#94a3b8}.labels{columns:2}.labels li{break-inside:avoid;margin-bottom:4px}
 </style>
 </head>
 <body><div class="wrap">
-  <div class="top"><a class="pill" href="../index.html">← 7iter docs</a><span class="pill">PUBLIC SAFE PAGE · no raw Drive photos</span></div>
+  <div class="top"><a class="pill" href="../index.html">← 7iter docs</a><span class="pill">PUBLIC DATASET · no Drive images</span></div>
+
   <section class="hero">
     <div>
       <span class="pill">Item 1 · Mosaic Year</span>
-      <h1>대표 이미지는<br/>STANDARD로, 공개 페이지는 안전하게</h1>
-      <p class="lead">Drive 원본 사진과 실제 모자이크 JPEG는 public GitHub Pages에 올리지 않습니다. 이 페이지는 대표님이 웹에서 바로 흐름을 볼 수 있는 safe visualization이며, 실제 STANDARD 기반 결과는 로컬에서 생성해 확인합니다.</p>
-      <p><a class="btn" href="#test">테스트 방법 보기</a> <a class="btn dark" href="assets/public-placeholder-mosaic.svg">safe SVG 열기</a></p>
+      <h1>ImageNet label로 고른 이미지가<br/>모자이크의 합이 됩니다</h1>
+      <p class="lead">최신 코멘트에 맞춰 Drive 사진을 쓰지 않고, ImageNet-derived public subset인 <b>Imagenette 2 160px</b> validation split으로 실제 JPEG 결과를 생성했습니다.</p>
+      <p class="lead">Target label은 <b>n03028079 / church</b>, tile pool은 나머지 9개 label에서 각 12장씩 균형 있게 선정했습니다.</p>
     </div>
-    <div class="panel preview">
-      <span class="badge">safe placeholder</span>
-      <img src="assets/public-placeholder-mosaic.svg" alt="Public safe mosaic placeholder" />
-      <div class="zoom" aria-label="hover zoom tiles">
-        <span style="--c1:#fde68a;--c2:#f472b6"></span><span style="--c1:#93c5fd;--c2:#22d3ee"></span><span style="--c1:#fb7185;--c2:#fbbf24"></span><span style="--c1:#a78bfa;--c2:#60a5fa"></span><span style="--c1:#34d399;--c2:#d9f99d"></span><span style="--c1:#f0abfc;--c2:#818cf8"></span><span style="--c1:#fdba74;--c2:#fef3c7"></span><span style="--c1:#67e8f9;--c2:#bae6fd"></span><span style="--c1:#fda4af;--c2:#fecdd3"></span><span style="--c1:#bef264;--c2:#86efac"></span>
-        <span style="--c1:#93c5fd;--c2:#22d3ee"></span><span style="--c1:#fde68a;--c2:#f472b6"></span><span style="--c1:#34d399;--c2:#d9f99d"></span><span style="--c1:#fb7185;--c2:#fbbf24"></span><span style="--c1:#a78bfa;--c2:#60a5fa"></span><span style="--c1:#67e8f9;--c2:#bae6fd"></span><span style="--c1:#f0abfc;--c2:#818cf8"></span><span style="--c1:#fdba74;--c2:#fef3c7"></span><span style="--c1:#bef264;--c2:#86efac"></span><span style="--c1:#fda4af;--c2:#fecdd3"></span>
-      </div>
+    <div class="panel result">
+      <span class="badge">actual mosaic output</span>
+      <img src="assets/imagenette-mosaic-output.jpg" alt="Actual label-selected Imagenette mosaic output" />
     </div>
   </section>
 
   <section class="grid">
-    <div class="card safe"><h2>STANDARD 재확인</h2><p><b class="bad">현재 발견 안 됨.</b><br/>Drive folder를 다시 fetch했고, `standard`, `STANDARD`, `.jpg/.jpeg/.png`를 모두 case-insensitive로 검사했습니다. 결과: 50 image rows, match 0.</p></div>
-    <div class="card"><h2>실제 모자이크 상태</h2><p>STANDARD가 없어서 최종 target mosaic는 생성하지 못했습니다. 대신 fallback demo는 로컬에서 재생성했고, 실제 원본 기반 output은 public push 금지입니다.</p></div>
-    <div class="card unsafe"><h2>Public push 금지</h2><p>`item-1-mosaic-app/sample/*`, `mockup/generated/mosaic_demo.jpg`, `tile_contact_sheet.jpg`는 Drive 원본/파생물이므로 공개 repo에 올리지 말아야 합니다.</p></div>
+    <div class="card"><h2>Dataset</h2><p><b>Imagenette 2 160px</b><br/>fast.ai가 배포하는 ImageNet 10-class subset. 원본 ImageNet 접근 대신 공개적으로 재현 가능한 ImageNet-derived 대안입니다.</p></div>
+    <div class="card"><h2>Target</h2><p><b>n03028079 · church</b><br/>건축물 실루엣과 하늘/명암 대비가 있어 “멀리서 대표 이미지, 가까이서 tile” 효과를 검증하기 좋습니다.</p></div>
+    <div class="card"><h2>Tile pool</h2><p><b>9 labels × 12 images = 108 tiles</b><br/>target label은 제외하고, 나머지 label을 같은 수로 뽑아 label 기준 selection을 명확히 했습니다.</p></div>
   </section>
 
-  <section id="test" class="panel" style="margin-top:48px">
-    <h2>테스트 quick start</h2>
-    <p>GitHub Pages에서는 이 페이지 URL을 엽니다: <code>https://sunggyu-kim.github.io/7iter/item1/</code></p>
-    <div class="code">cd /home/sunggyu/.openclaw/workspace/projects/marketing-seven-iter
-python3 -m http.server 8000 --directory docs
-# browser: http://localhost:8000/item1/</div>
-    <p>실제 STANDARD 재확인/생성은 로컬에서:</p>
+  <section class="split">
+    <div class="panel">
+      <h2>Target image</h2>
+      <img class="shot" src="assets/imagenette-target-church.jpg" alt="Imagenette target church image" />
+      <p class="warn">대표 이미지도 public dataset 이미지이므로 docs assets에 포함했습니다.</p>
+    </div>
+    <div class="panel">
+      <h2>Tile contact sheet</h2>
+      <img class="shot" src="assets/imagenette-tile-contact-sheet.jpg" alt="Contact sheet of selected Imagenette tile images" />
+      <p>각 tile은 EXIF transpose → center crop → resize만 적용했습니다. 색상 tint/hue/opacity overlay는 적용하지 않았습니다.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Selected labels</h2><ul class="labels"><li>n01440764 · tench</li><li>n02102040 · English springer</li><li>n02979186 · cassette player</li><li>n03000684 · chain saw</li><li>n03394916 · French horn</li><li>n03417042 · garbage truck</li><li>n03425413 · gas pump</li><li>n03445777 · golf ball</li><li>n03888257 · parachute</li></ul></div>
+    <div class="card"><h2>Generated report</h2><p><span class="ok">✓</span> 864×576 mosaic<br/><span class="ok">✓</span> 48×32 grid, 18px cells<br/><span class="ok">✓</span> JSON includes target_label and tile_label_counts</p><p><a href="assets/imagenette-mosaic-report.json">Open report JSON</a></p></div>
+    <div class="card"><h2>Known limitation</h2><p>Imagenette 160px는 작고 10-class라 색 coverage가 제한됩니다. 이번 run의 hard_match_cell_ratio는 높습니다. 이는 작은 public subset의 한계이며, 실제 상품에서는 더 많은 label/색상 coverage가 필요합니다.</p></div>
+  </section>
+
+  <section class="panel" style="margin-top:38px">
+    <h2>Reproduce</h2>
     <div class="code">cd /home/sunggyu/.openclaw/workspace/projects/marketing-seven-iter/item-1-mosaic-app
-./scripts/download_drive_samples.py --refresh-manifest --find-standard --skip-download
-./scripts/download_drive_samples.py --download-standard
-./scripts/mosaic_poc.py --tiles sample --cols 42 --cell 28</div>
+mkdir -p public_data
+curl -L -o public_data/imagenette2-160.tgz https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz
+tar -xzf public_data/imagenette2-160.tgz -C public_data
+./scripts/prepare_imagenette_mosaic.py --dataset-root public_data/imagenette2-160 --out public_data/imagenette_mosaic --target-wnid n03028079 --tiles-per-label 12
+./scripts/mosaic_poc.py --dataset-name 'Imagenette 2 160px (fast.ai ImageNet-derived subset)' \
+  --target public_data/imagenette_mosaic/target/n03028079_church_target.jpg \
+  --tiles public_data/imagenette_mosaic/tiles \
+  --out ../docs/item1/assets/imagenette-mosaic-output.jpg \
+  --report ../docs/item1/assets/imagenette-mosaic-report.json \
+  --cols 48 --cell 18</div>
   </section>
 
-  <section class="footer">404 원인: GitHub Pages source가 `/docs`일 때 `../item-1-mosaic-app/...` 링크는 published site 밖을 가리켜 404가 납니다. 그래서 docs index의 Item1 PoC 링크는 `/item1/` 상대경로로 고쳤습니다.</section>
+  <section class="footer">This page intentionally supersedes the earlier Drive-safe placeholder: no Drive images are used in the displayed target, tile sheet, or mosaic output.</section>
 </div></body></html>
