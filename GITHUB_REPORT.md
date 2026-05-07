@@ -135,3 +135,14 @@ Issue #1 최신 comment에 따라 Drive 이미지가 아니라 라벨링된 공�
 - Target image: `docs/item1/assets/imagenette-target-church.jpg`
 - Contact sheet: `docs/item1/assets/imagenette-tile-contact-sheet.jpg`
 - Repro docs: `item-1-mosaic-app/IMAGENET_DATASET_MOSAIC.md`
+
+
+## 2026-05-07 Item 2/4 Round 3 Update
+
+- Item 2: 대표님 404 comment 확인. 현재 `https://sunggyu-kim.github.io/7iter/item2/`는 HTTP 200으로 정상 접근됨. 상태 기록: `item-2-reactive-keyboard-goods/PAGES_STATUS_ROUND3.md`.
+- Item 4: 최신 comment에 따라 high-detail retro game-card inspired holo demo로 업그레이드. `docs/item4/index.html`에서 직접 확인 가능.
+  - Holo styles: Circle foil, Grid, Glitch/static, Prism 3D
+  - Game-card mapping: name, HP number, type icon, age/evolution, photo, attack, ability, hidden secrets, card number/rarity
+  - KOR/ENG language toggle
+  - CSS 3D transform/parallax/layered glare
+  - hidden Weakness/Resistance/Retreat Cost reveal
