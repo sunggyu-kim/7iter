@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+  <defs>
+    <style>
+      .bg{fill:#fbf7ef}.card{fill:#fffdf8;stroke:#e7dcc9;stroke-width:2}.ink{fill:#211f1b;font-family:Inter,Arial,sans-serif}.muted{fill:#746f66;font-family:Inter,Arial,sans-serif}.accent{fill:#d96f32}.line{stroke:#d96f32;stroke-width:3;fill:none;marker-end:url(#arrow)}.pill{fill:#fff0e5}.no{fill:#f8dfd8;stroke:#d48a78;stroke-width:2}.ok{fill:#e6f2df;stroke:#8bb36d;stroke-width:2}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#d96f32"/></marker>
+  </defs>
+  <rect class="bg" width="1100" height="620"/>
+  <text class="ink" x="54" y="70" font-size="38" font-weight="800">Mosaic Year low-distortion pipeline</text>
+  <text class="muted" x="56" y="104" font-size="18">원본 사진은 색변형하지 않고, 부족한 색은 신규 이미지 보충 대상으로 분리합니다.</text>
+
+  <g transform="translate(54 150)">
+    <rect class="card" width="210" height="150" rx="22"/>
+    <text class="ink" x="24" y="44" font-size="22" font-weight="800">1. Inputs</text>
+    <text class="muted" x="24" y="78" font-size="15">standard.jpg target</text>
+    <text class="muted" x="24" y="104" font-size="15">memory photos as tiles</text>
+    <rect class="no" x="24" y="116" width="158" height="22" rx="11"/>
+    <text class="ink" x="36" y="132" font-size="12">standard missing now</text>
+  </g>
+
+  <path class="line" d="M280 225 H348"/>
+
+  <g transform="translate(360 150)">
+    <rect class="card" width="230" height="150" rx="22"/>
+    <text class="ink" x="24" y="44" font-size="22" font-weight="800">2. Normalize</text>
+    <text class="muted" x="24" y="78" font-size="15">EXIF rotation</text>
+    <text class="muted" x="24" y="104" font-size="15">center crop</text>
+    <text class="muted" x="24" y="130" font-size="15">resize only</text>
+  </g>
+
+  <path class="line" d="M604 225 H672"/>
+
+  <g transform="translate(684 150)">
+    <rect class="card" width="250" height="150" rx="22"/>
+    <text class="ink" x="24" y="44" font-size="22" font-weight="800">3. Match</text>
+    <text class="muted" x="24" y="78" font-size="15">target cell average RGB</text>
+    <text class="muted" x="24" y="104" font-size="15">nearest tile average RGB</text>
+    <text class="muted" x="24" y="130" font-size="15">reuse penalty</text>
+  </g>
+
+  <g transform="translate(150 380)">
+    <rect class="ok" width="260" height="112" rx="22"/>
+    <text class="ink" x="24" y="42" font-size="21" font-weight="800">Allowed transforms</text>
+    <text class="ink" x="24" y="74" font-size="15">rotate · crop · resize</text>
+  </g>
+
+  <g transform="translate(430 380)">
+    <rect class="no" width="260" height="112" rx="22"/>
+    <text class="ink" x="24" y="42" font-size="21" font-weight="800">Avoid</text>
+    <text class="ink" x="24" y="74" font-size="15">tint · hue shift · opacity wash</text>
+  </g>
+
+  <g transform="translate(710 380)">
+    <rect class="card" width="280" height="112" rx="22"/>
+    <text class="ink" x="24" y="42" font-size="21" font-weight="800">Color gaps</text>
+    <text class="muted" x="24" y="74" font-size="15">Generate/acquire new matching photos</text>
+  </g>
+</svg>

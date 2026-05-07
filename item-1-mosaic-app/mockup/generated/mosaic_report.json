@@ -1,0 +1,75 @@
+{
+  "target": "sample/IMG_4265.jpeg",
+  "fallback_note": "standard.jpg was missing; demo target substituted with IMG_4265.jpeg",
+  "tile_count": 49,
+  "grid": {
+    "cols": 36,
+    "rows": 48,
+    "cell_px": 24,
+    "output_px": [
+      864,
+      1152
+    ]
+  },
+  "method": "EXIF transpose + center crop + resize only; no hue/tint/opacity color transform",
+  "avg_match_distance_rgb": 420.0,
+  "hard_match_cell_ratio": 0.9792,
+  "target_color_mix": {
+    "near-black": 1145,
+    "neutral-gray": 227,
+    "blue/cool": 57,
+    "near-white": 13,
+    "warm-yellow/orange": 192,
+    "red/warm": 94
+  },
+  "tile_color_mix": {
+    "neutral-gray": 31,
+    "blue/cool": 3,
+    "warm-yellow/orange": 2,
+    "red/warm": 12,
+    "near-black": 1
+  },
+  "most_reused_tiles": [
+    [
+      "IMG_9023.jpeg",
+      42
+    ],
+    [
+      "IMG_9024.jpeg",
+      42
+    ],
+    [
+      "IMG_9019.jpeg",
+      41
+    ],
+    [
+      "IMG_9020.jpeg",
+      41
+    ],
+    [
+      "IMG_4270.jpeg",
+      41
+    ],
+    [
+      "IMG_9018.jpeg",
+      40
+    ],
+    [
+      "IMG_4271.jpeg",
+      40
+    ],
+    [
+      "IMG_9008.jpeg",
+      40
+    ],
+    [
+      "IMG_9026.jpeg",
+      40
+    ],
+    [
+      "IMG_9021.jpeg",
+      39
+    ]
+  ],
+  "recommendation": "If hard_match_cell_ratio is high or a target_color_mix bucket is missing in tile_color_mix, generate/acquire new photos in those color families rather than recoloring existing photos."
+}

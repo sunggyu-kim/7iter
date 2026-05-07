@@ -5,6 +5,8 @@
 - `sg90_clicker_mount_preview_v0_1.stl` — rough printable/preview mesh generated from the layout
 - `sg90-clicker-mount-dimensions.svg` — top/side dimension reference
 - `assembly-render.svg` — visual assembly concept
+- `ASSEMBLY_WIRING_NOTES.md` — assembly/wire-routing checklist without changing the CAD draft
+- `wiring-sg90-esp32c3.svg` — SG90/ESP32-C3 wiring reference
 
 ## Purchased parts reflected
 - MicroServo 9g SG90

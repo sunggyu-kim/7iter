@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mosaic Year Decision Mockup</title>
+  <style>
+    :root { --ink:#211f1b; --muted:#746f66; --paper:#fbf7ef; --card:#fffdf8; --accent:#d96f32; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; background:var(--paper); color:var(--ink); }
+    .wrap { max-width:1120px; margin:0 auto; padding:44px 24px 64px; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:13px; }
+    h1 { font-size:42px; line-height:1.05; margin:12px 0 12px; }
+    p { color:var(--muted); line-height:1.65; }
+    .grid { display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:start; }
+    .card { background:var(--card); border:1px solid #e9dfce; border-radius:24px; padding:22px; box-shadow:0 16px 42px rgba(54,42,20,.08); }
+    .hero img { width:100%; border-radius:16px; display:block; }
+    .badge { display:inline-block; padding:6px 10px; border-radius:999px; background:#fff0e5; color:#9a4b20; font-size:13px; font-weight:700; }
+    .stat { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:16px; }
+    .stat b { display:block; font-size:26px; }
+    .stat span { color:var(--muted); font-size:13px; }
+    .decision { margin-top:20px; padding:16px; border-radius:18px; background:#f4ead9; }
+    .contact { width:100%; border-radius:16px; margin-top:12px; }
+    code { background:#f1eadf; padding:2px 6px; border-radius:6px; }
+    @media (max-width: 850px) { .grid { grid-template-columns:1fr; } h1 { font-size:34px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Mosaic Year / 대표 판단용 PoC</div>
+    <h1>사진을 색칠하지 않고,<br/>배치로 대표 이미지를 만듭니다.</h1>
+    <p>Drive 샘플 50개 다운로드 및 로컬 PoC는 완료했습니다. 다만 GitHub repo가 public이므로 원본 사진과 실제 Drive 기반 mosaic JPEG는 public push에서 제외합니다. 실제 판단 전에는 <code>standard.jpg</code>를 추가하면 동일 파이프라인으로 로컬 재생성됩니다.</p>
+
+    <section class="grid">
+      <div class="card hero">
+        <span class="badge">Public-safe mock — local Drive test completed</span>
+        <h2>Output mosaic</h2>
+        <img src="generated/public_placeholder_mosaic.svg" alt="Public-safe mosaic placeholder; private Drive output remains local" />
+        <p>타일은 EXIF 보정, 중앙 크롭, 리사이즈만 적용했습니다. 개별 사진의 색감을 강제로 바꾸지 않아 확대했을 때 ‘내 사진’으로 남는 방향입니다.</p>
+      </div>
+
+      <aside class="card">
+        <h2>대표님 체크 포인트</h2>
+        <div class="stat">
+          <div><b>50</b><span>Drive JPEG samples tested locally</span></div>
+          <div><b>0</b><span>strong color transforms</span></div>
+          <div><b>36×27</b><span>demo tile grid</span></div>
+          <div><b>missing</b><span>standard.jpg</span></div>
+        </div>
+        <div class="decision">
+          <b>판단 질문</b>
+          <p>이 방향은 “원본 추억 보존”이 장점입니다. 색이 부족한 구간은 기존 사진을 왜곡하지 말고 신규/생성 이미지를 보충하는 운영 UX가 필요합니다.</p>
+        </div>
+        <h3>Privacy note</h3>
+        <p>원본 Drive 사진과 contact sheet는 public GitHub에 업로드하지 않습니다. 로컬 산출물은 검증 완료 상태입니다.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

@@ -92,3 +92,18 @@
 2. **Item 4** — 가장 프리미엄하고 공유성이 강한 실물 전환 후보
 3. **Item 1** — 감성형 바이럴/포스터 확장 후보
 4. **Item 2** — 상징성과 촬영력은 강하나 하드웨어 실측/출력 리스크 존재
+
+
+## 2026-05-07 Issue Comment 반영 업데이트
+
+각 issue의 최신 대표님 comment를 기준으로 추가 산출물을 만들었다.
+
+- #1 Item 1: Drive sample 기반 로컬 mosaic PoC, low-distortion pipeline, public-safe decision mockup
+- #2 Item 2: SG90/ESP32-C3 wiring, Mac setup, PlatformIO/Arduino firmware
+- #3 Item 3: 20~30대 hip card customizer, font pack, social/QR/NFC/vCard architecture
+- #4 Item 4: holo tier system, card layout, interactive 3D holo card mockup
+
+통합 사이트: `docs/index.html`
+상세 요약: `COMMENT_WORK_SUMMARY_2026-05-07.md`
+
+주의: repo가 public이므로 item1의 원본 Drive 사진과 Drive 기반 mosaic JPEG/contact sheet는 GitHub publish에서 제외했다.

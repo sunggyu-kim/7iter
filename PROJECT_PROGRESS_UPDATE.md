@@ -21,3 +21,17 @@
 - item2 실측 기반 CAD 치수 보정 및 출력 테스트
 - item3 실제 interactive form prototype
 - item4 인쇄소 샘플 제작 사양 확정
+
+
+## 2026-05-07 Comment-driven heavy work update
+
+대표님이 issue #1~#4에 추가한 comment를 기준으로 item별 전담 agent 4개를 병렬 실행했다.
+
+- Item 1: Drive 샘플 50개 로컬 테스트, 저변형 mosaic PoC script 작성. `standard.jpg` 부재로 최종 지정 target은 blocked. Public repo에는 원본 사진/Drive 기반 output 제외.
+- Item 2: SG90 + ESP32-C3 SuperMini wiring/setup, Mac 설치 절차, Arduino/PlatformIO firmware mock 작성.
+- Item 3: 20~30대 타깃 hip card customizer interactive HTML, font pack, social/QR/NFC/vCard architecture 작성.
+- Item 4: IP-safe holo tier system, card layout spec, pointer-responsive 3D holo trading card mockup 작성.
+
+통합 목업 사이트 `docs/index.html`에 신규 산출물 링크를 추가했다.
+
+상세: `COMMENT_WORK_SUMMARY_2026-05-07.md`
