@@ -1,0 +1,14 @@
+{
+  "name": "item4-hologram-business-card-demo",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Static interactive hologram business card demo for GitHub Pages/Vercel review.",
+  "scripts": {
+    "dev": "python3 -m http.server 4174 --directory ../docs/item4",
+    "serve": "python3 -m http.server 4174 --directory ../docs/item4",
+    "build": "node scripts/build-static.mjs",
+    "validate": "node scripts/validate-static.mjs"
+  },
+  "keywords": ["hologram", "business-card", "static-demo", "vercel", "github-pages"],
+  "license": "UNLICENSED"
+}

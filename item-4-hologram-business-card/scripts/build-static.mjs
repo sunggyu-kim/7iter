@@ -1,0 +1,14 @@
+import { cpSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const here = dirname(fileURLToPath(import.meta.url));
+const itemRoot = resolve(here, '..');
+const preferredDocs = resolve(itemRoot, '../docs/item4');
+const fallbackPublic = resolve(itemRoot, 'public');
+const source = existsSync(resolve(preferredDocs, 'index.html')) ? preferredDocs : fallbackPublic;
+const dist = resolve(itemRoot, 'dist');
+if (!existsSync(resolve(source, 'index.html'))) throw new Error(`Missing static source index.html in ${source}`);
+rmSync(dist, { recursive: true, force: true });
+mkdirSync(dist, { recursive: true });
+cpSync(source, dist, { recursive: true });
+console.log(`Built static demo from ${source} -> ${dist}`);

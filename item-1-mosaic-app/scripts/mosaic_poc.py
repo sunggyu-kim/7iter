@@ -12,6 +12,16 @@ from collections import Counter
 from PIL import Image, ImageOps, ImageStat, ImageDraw
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+STANDARD_EXTS = {".jpg", ".jpeg", ".png"}
+
+
+def find_standard_image(tile_dir: pathlib.Path) -> pathlib.Path | None:
+    """Find standard/STANDARD jpg/jpeg/png in the tile directory, case-insensitively."""
+    matches = sorted(
+        p for p in tile_dir.iterdir()
+        if p.is_file() and p.stem.lower() == "standard" and p.suffix.lower() in STANDARD_EXTS
+    )
+    return matches[0] if matches else None
 
 
 def mean_rgb(img: Image.Image) -> tuple[float, float, float]:
@@ -68,7 +78,7 @@ def choose_tile(target_rgb, tile_meta, usage, max_reuse):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--target", default="sample/standard.jpg", help="representative image; expected standard.jpg")
+    ap.add_argument("--target", default="", help="representative image; if omitted, finds standard/STANDARD .jpg/.jpeg/.png in --tiles")
     ap.add_argument("--tiles", default="sample", help="folder of mosaic tile photos")
     ap.add_argument("--out", default="mockup/generated/mosaic_demo.jpg")
     ap.add_argument("--report", default="mockup/generated/mosaic_report.json")
@@ -78,15 +88,15 @@ def main() -> int:
     ap.add_argument("--allow-fallback-target", action="store_true", help="if standard.jpg is missing, use first tile as demo target")
     args = ap.parse_args()
 
-    target = pathlib.Path(args.target)
     tile_dir = pathlib.Path(args.tiles)
+    target = pathlib.Path(args.target) if args.target else (find_standard_image(tile_dir) or pathlib.Path("sample/STANDARD.jpg"))
     all_imgs = sorted(p for p in tile_dir.iterdir() if p.suffix.lower() in IMG_EXTS and p.is_file())
     fallback_note = None
     if not target.exists():
         if not args.allow_fallback_target or not all_imgs:
-            raise SystemExit(f"Target missing: {target}. Put standard.jpg there or pass --allow-fallback-target for demo.")
+            raise SystemExit(f"Target missing: {target}. Put standard/STANDARD jpg/jpeg/png in {tile_dir} or pass --allow-fallback-target for demo.")
         target = all_imgs[0]
-        fallback_note = f"standard.jpg was missing; demo target substituted with {target.name}"
+        fallback_note = f"standard/STANDARD jpg/jpeg/png was missing; demo target substituted with {target.name}"
 
     tile_paths = [p for p in all_imgs if p.resolve() != target.resolve()]
     if not tile_paths:

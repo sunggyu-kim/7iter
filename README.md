@@ -71,3 +71,16 @@ GitHub Pages가 활성화되면 아래 주소에서 직접 볼 수 있습니다.
 - 프리미엄 실물 대표샘플: **Item 4**
 - 감성형 바이럴/출력 상품: **Item 1**
 - 가장 상징적인 하드웨어 데모: **Item 2**
+
+
+## Round 2 직접 확인 링크
+
+GitHub Pages `/docs` 기준으로 각 item별 직접 확인 page를 추가했습니다.
+
+- Home: https://sunggyu-kim.github.io/7iter/
+- Item 1: https://sunggyu-kim.github.io/7iter/item1/
+- Item 2: https://sunggyu-kim.github.io/7iter/item2/
+- Item 3: https://sunggyu-kim.github.io/7iter/item3/
+- Item 4: https://sunggyu-kim.github.io/7iter/item4/
+
+상세 요약: `ROUND2_WEB_VISUALIZATION_SUMMARY_2026-05-07.md`

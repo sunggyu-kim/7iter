@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Item 2 · SG90 Reactive Clicker Test Guide</title>
+<style>
+:root{--bg:#07111f;--panel:#0f172a;--ink:#e5e7eb;--muted:#94a3b8;--line:#263244;--cyan:#22d3ee;--violet:#a78bfa;--green:#34d399;--red:#f87171;--yellow:#fde047}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0,#164e63 0,#07111f 36%,#020617 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}a{color:#67e8f9;text-decoration:none}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre{overflow:auto;background:#020617;border:1px solid #243044;border-radius:16px;padding:16px}.wrap{max-width:1180px;margin:auto;padding:32px 20px 72px}.hero{padding:42px 0 24px}.kicker{display:inline-block;border:1px solid #334155;border-radius:999px;padding:7px 12px;background:rgba(15,23,42,.75);color:#bae6fd;font-size:13px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}h1{font-size:clamp(36px,6vw,72px);line-height:.98;margin:18px 0 12px;letter-spacing:-.055em}.lead{font-size:20px;color:#cbd5e1;max-width:880px}.nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border-radius:14px;background:#e5e7eb;color:#020617;font-weight:900}.btn.dark{background:#111827;color:#fff;border:1px solid #334155}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}@media(max-width:900px){.grid,.grid3{grid-template-columns:1fr}}.panel{background:linear-gradient(180deg,rgba(15,23,42,.92),rgba(2,6,23,.92));border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.24)}.panel h2{font-size:31px;letter-spacing:-.035em;margin:0 0 12px}.panel h3{margin:12px 0 8px}.mini{color:var(--muted);font-size:14px}.warn{border-left:5px solid var(--red);background:rgba(248,113,113,.09);padding:12px 14px;border-radius:14px}.ok{border-left:5px solid var(--green);background:rgba(52,211,153,.08);padding:12px 14px;border-radius:14px}.step{display:flex;gap:12px;align-items:flex-start;margin:10px 0}.num{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--violet));color:#020617;font-weight:950}table{width:100%;border-collapse:collapse;margin:12px 0;border:1px solid #263244;border-radius:16px;overflow:hidden}th,td{padding:10px 12px;border-bottom:1px solid #263244;text-align:left}th{background:#111827;color:#bae6fd}.imgbox{background:#f8fafc;border-radius:22px;padding:12px}.imgbox img{width:100%;display:block;border-radius:14px}.pill{display:inline-flex;padding:5px 9px;border:1px solid #334155;border-radius:999px;color:#cbd5e1;font-size:12px;font-weight:800;margin:0 5px 6px 0}.footer{margin-top:42px;color:#94a3b8;border-top:1px solid #263244;padding-top:22px}
+</style>
+</head>
+<body><div class="wrap">
+  <section class="hero">
+    <span class="kicker">Item 2 hardware quickstart · SG90 + ESP32-C3</span>
+    <h1>10분 안에<br/>“AI 완료 → 딸깍” 테스트</h1>
+    <p class="lead">대표님이 웹에서 바로 따라 볼 수 있는 설치/배선/펌웨어 안내입니다. SG90 horn은 처음엔 빼고, Mac Serial Monitor에서 <code>DONE</code>을 보내 한 번 클릭되는지 확인합니다.</p>
+    <div class="nav">
+      <a class="btn dark" href="../../item-2-reactive-keyboard-goods/WIRING_AND_SETUP.md">전체 Markdown 가이드</a>
+      <a class="btn" href="../../item-2-reactive-keyboard-goods/firmware/sg90_clicker_mock/sg90_clicker_mock.ino">Firmware</a>
+      <a class="btn" href="../../item-2-reactive-keyboard-goods/cad/sg90_clicker_mount_v0_1.scad">OpenSCAD CAD</a>
+      <a class="btn" href="../index.html#item2">목업 홈으로</a>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="panel" id="parts">
+      <h2>1. 준비물</h2>
+      <span class="pill">MicroServo 9g SG90</span><span class="pill">ESP32-C3 SuperMini</span><span class="pill">Mac USB-C data cable</span><span class="pill">5V 1A servo power</span>
+      <table><thead><tr><th>구분</th><th>필수/권장</th></tr></thead><tbody>
+        <tr><td>보드</td><td>ESP32-C3 SuperMini 1개</td></tr>
+        <tr><td>서보</td><td>SG90 + 기본 horn</td></tr>
+        <tr><td>전원</td><td>SG90용 외부 5V 1A 권장</td></tr>
+        <tr><td>소프트웨어</td><td>Arduino IDE 2.x 또는 PlatformIO</td></tr>
+      </tbody></table>
+      <div class="warn"><b>금지:</b> SG90 빨간선을 ESP32-C3 <code>3V3</code>에 연결하지 마세요. 전류 부족으로 리셋/손상 위험이 있습니다.</div>
+    </article>
+
+    <article class="panel" id="wiring">
+      <h2>2. 배선</h2>
+      <table><thead><tr><th>SG90 wire</th><th>연결</th></tr></thead><tbody>
+        <tr><td>Brown/Black GND</td><td>외부 5V - 와 ESP32-C3 GND 공통</td></tr>
+        <tr><td>Red V+</td><td>외부 5V +</td></tr>
+        <tr><td>Orange/Yellow Signal</td><td>ESP32-C3 GPIO4</td></tr>
+      </tbody></table>
+      <pre>External 5V +  ---- SG90 Red
+External 5V -  ---- SG90 Brown/Black ---- ESP32-C3 GND
+ESP32-C3 GPIO4 ---- SG90 Orange/Yellow
+Mac USB-C      ---- ESP32-C3 USB-C</pre>
+      <p><a class="btn dark" href="../../item-2-reactive-keyboard-goods/cad/wiring-sg90-esp32c3.svg">Open wiring SVG</a></p>
+    </article>
+  </section>
+
+  <section class="panel" style="margin-top:18px" id="quickstart">
+    <h2>3. Step-by-step quickstart</h2>
+    <div class="grid">
+      <div>
+        <div class="step"><span class="num">1</span><div><b>Horn 분리</b><br/><span class="mini">처음엔 servo horn을 빼고 방향만 확인합니다.</span></div></div>
+        <div class="step"><span class="num">2</span><div><b>ESP32-C3를 Mac에 연결</b><br/><span class="mini">USB 충전 케이블이 아닌 data cable을 사용합니다.</span></div></div>
+        <div class="step"><span class="num">3</span><div><b>GND 공통 + signal GPIO4</b><br/><span class="mini">SG90 GND, 외부 5V -, ESP32-C3 GND를 묶습니다.</span></div></div>
+        <div class="step"><span class="num">4</span><div><b>외부 5V ON</b><br/><span class="mini">SG90 Red는 외부 5V +로만 공급합니다.</span></div></div>
+      </div>
+      <div>
+        <div class="step"><span class="num">5</span><div><b>Firmware upload</b><br/><span class="mini">Arduino IDE에서 ESP32C3 Dev Module + ESP32Servo library.</span></div></div>
+        <div class="step"><span class="num">6</span><div><b>Serial Monitor 115200</b><br/><span class="mini"><code>DONE</code> 입력 → 한 번 click 확인.</span></div></div>
+        <div class="step"><span class="num">7</span><div><b>Horn 장착</b><br/><span class="mini">rest angle에서 key/plunger를 누르지 않게 끼웁니다.</span></div></div>
+        <div class="step"><span class="num">8</span><div><b>각도 조정</b><br/><span class="mini"><code>PRESS_ANGLE</code>을 2–5°씩 조정해 최소 클릭 각도를 찾습니다.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:18px">
+    <article class="panel" id="mac">
+      <h2>4. Mac 설치/업로드</h2>
+      <h3>Arduino IDE</h3>
+      <ol>
+        <li>Arduino IDE 2.x 설치</li>
+        <li>Settings → Additional boards URL 추가:<br/><code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code></li>
+        <li>Boards Manager에서 <b>esp32 by Espressif Systems</b> 설치</li>
+        <li>Library Manager에서 <b>ESP32Servo</b> 설치</li>
+        <li>Board: <b>ESP32C3 Dev Module</b>, USB CDC On Boot: <b>Enabled</b></li>
+        <li><code>sg90_clicker_mock.ino</code> Upload</li>
+      </ol>
+      <h3>PlatformIO</h3>
+      <pre>cd item-2-reactive-keyboard-goods
+pio run -e esp32c3-supermini
+pio run -e esp32c3-supermini -t upload
+pio device monitor -b 115200</pre>
+    </article>
+
+    <article class="panel" id="firmware">
+      <h2>5. Firmware 테스트</h2>
+      <p>Serial Monitor에서 아래 명령을 보냅니다.</p>
+      <table><thead><tr><th>명령</th><th>동작</th></tr></thead><tbody>
+        <tr><td><code>DONE</code> 또는 <code>CLICK</code></td><td>즉시 한 번 click</td></tr>
+        <tr><td><code>REST</code></td><td>rest angle로 이동</td></tr>
+        <tr><td><code>PRESS</code></td><td>press angle로 이동 후 유지</td></tr>
+        <tr><td><code>HELP</code></td><td>명령 목록 출력</td></tr>
+      </tbody></table>
+      <div class="ok">기본 firmware는 6초마다 자동 mock click도 실행합니다. 실제 inference 완료만 받고 싶으면 <code>MOCK_INTERVAL_MS = 0</code>으로 바꿉니다.</div>
+    </article>
+  </section>
+
+  <section class="grid" style="margin-top:18px">
+    <article class="panel" id="cad">
+      <h2>6. Wiring SVG + CAD</h2>
+      <div class="imgbox"><img src="../../item-2-reactive-keyboard-goods/cad/wiring-sg90-esp32c3.svg" alt="SG90 ESP32-C3 wiring diagram" /></div>
+      <p>
+        <a class="btn dark" href="../../item-2-reactive-keyboard-goods/cad/assembly-render.svg">Assembly render</a>
+        <a class="btn" href="../../item-2-reactive-keyboard-goods/cad/sg90-clicker-mount-dimensions.svg">Dimensions SVG</a>
+        <a class="btn" href="../../item-2-reactive-keyboard-goods/cad/sg90_clicker_mount_preview_v0_1.stl">STL preview</a>
+      </p>
+    </article>
+
+    <article class="panel" id="troubleshooting">
+      <h2>7. Troubleshooting</h2>
+      <table><thead><tr><th>증상</th><th>확인</th></tr></thead><tbody>
+        <tr><td>Servo 무동작</td><td>외부 5V, 공통 GND, GPIO4 signal 확인</td></tr>
+        <tr><td>ESP32-C3 reset</td><td>SG90 전원을 별도 5V 1A로 분리</td></tr>
+        <tr><td>Upload 실패</td><td>BOOT 버튼, data cable, port 재선택</td></tr>
+        <tr><td>Serial 글자 깨짐</td><td>baud 115200 설정</td></tr>
+        <tr><td>Servo buzzing</td><td>기구 간섭/과한 press angle. 각도 낮추기</td></tr>
+        <tr><td>키가 안 눌림</td><td>horn 위치와 <code>PRESS_ANGLE</code> 2–5° 조정</td></tr>
+      </tbody></table>
+    </article>
+  </section>
+
+  <section class="footer">Round2 upgrade: 이 페이지는 부품 → 배선 → Mac 설치 → firmware upload → serial command 테스트 → CAD/트러블슈팅을 한 화면에 묶어 웹 브라우저에서 바로 확인할 수 있게 만든 대표 검토용 guide입니다.</section>
+</div></body></html>

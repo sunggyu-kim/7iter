@@ -107,3 +107,17 @@
 상세 요약: `COMMENT_WORK_SUMMARY_2026-05-07.md`
 
 주의: repo가 public이므로 item1의 원본 Drive 사진과 Drive 기반 mosaic JPEG/contact sheet는 GitHub publish에서 제외했다.
+
+
+## 2026-05-07 Round 2 Web Visualization Update
+
+최신 issue comment 반영 결과, GitHub Pages에서 바로 확인 가능한 item별 page를 추가했다.
+
+- Item 1: `/item1/` — Mosaic test 방법, STANDARD 재검색 결과, public-safe demo
+- Item 2: `/item2/` — SG90/ESP32-C3 quickstart, wiring, firmware test
+- Item 3: `/item3/` — Hip business card customizer web demo + Vercel-ready files
+- Item 4: `/item4/` — Interactive holo card web demo + Vercel-ready files
+
+기존 404 원인: GitHub Pages source가 `/docs`인데, 링크가 `/docs` 밖의 item folder를 상대경로로 가리켰기 때문. 이번에 `docs/item1~4/index.html`로 수정했다.
+
+상세: `ROUND2_WEB_VISUALIZATION_SUMMARY_2026-05-07.md`

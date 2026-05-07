@@ -35,3 +35,14 @@
 통합 목업 사이트 `docs/index.html`에 신규 산출물 링크를 추가했다.
 
 상세: `COMMENT_WORK_SUMMARY_2026-05-07.md`
+
+
+## 2026-05-07 Round 2 — Web에서 직접 볼 수 있게 수정
+
+- 최신 issue comment 재수집 후 item1~4 전담 agent 재실행.
+- item1·3·4는 GitHub Pages에서 직접 볼 수 있는 `docs/itemN/index.html` 구조로 변경.
+- item2도 테스트/설치 가이드를 `docs/item2/index.html`로 추가.
+- Vercel-ready 파일은 item3/item4에 추가.
+- 404 원인은 `/docs` publish root 밖을 링크한 상대경로 문제로 확인 및 수정.
+
+검증 후 GitHub push 및 issue comment 업데이트 예정.

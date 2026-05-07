@@ -1,6 +1,6 @@
 {
   "target": "sample/IMG_4265.jpeg",
-  "fallback_note": "standard.jpg was missing; demo target substituted with IMG_4265.jpeg",
+  "fallback_note": "standard/STANDARD jpg/jpeg/png was missing; demo target substituted with IMG_4265.jpeg",
   "tile_count": 49,
   "grid": {
     "cols": 36,
@@ -12,8 +12,8 @@
     ]
   },
   "method": "EXIF transpose + center crop + resize only; no hue/tint/opacity color transform",
-  "avg_match_distance_rgb": 420.0,
-  "hard_match_cell_ratio": 0.9792,
+  "avg_match_distance_rgb": 108.64,
+  "hard_match_cell_ratio": 0.5237,
   "target_color_mix": {
     "near-black": 1145,
     "neutral-gray": 227,
