@@ -2,7 +2,7 @@
 
 ## 2026-05-08 — Manager system bootstrap
 - Request: Register item under manager-system for async update continuity.
-- Manager: manager3
+- Manager: Overall Manager
 - Work Performed: Created persistent CONTEXT/HISTORY/STATUS/JOBS/GITHUB records.
 - Validation: Markdown structure added to repo.
 - GitHub Comment: pending sync.

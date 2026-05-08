@@ -1,7 +1,7 @@
 # AI Story Business Card Status
 
 ## Current State
-Registered under `manager3`.
+Registered under `Overall Manager`.
 
 ## Latest Visible URL
 - https://sunggyu-kim.github.io/7iter/item3/

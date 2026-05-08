@@ -1,7 +1,7 @@
 # Semantic Object Mosaic Lab Status
 
 ## Current State
-Registered under `manager1`.
+Registered under `Overall Manager`.
 
 ## Latest Visible URL
 - https://sunggyu-kim.github.io/7iter/item1-1/

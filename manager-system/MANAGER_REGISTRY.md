@@ -1,17 +1,19 @@
 # Manager Registry
 
-| Manager | Scope | GitHub Issues | Primary Output | Review Gate |
-|---|---|---|---|---|
-| manager1 | Item 1, Item 1-1 | #1, #5 | mosaic demos/forks | visual result + dataset policy |
-| manager2 | Item 2 | #2 | CAD/Soul designs | SG90 compatibility |
-| manager3 | Item 3, Item 3-1 | #3, #6 | app/card/jellyfish | visual quality + interaction |
-| manager4 | Item 4 | #4 | holo card | premium UX consistency |
+| Manager | Scope | GitHub Issue | Project |
+|---|---|---:|---|
+| Overall Manager | Item 1~4 + all forked items (`1-1`, `3-1`, future `N-1/N-2`) | #11 | @sunggyu-kim's 7iter project |
 
-## Project Registration
+## Item ownership
 
-| Manager | Manager Issue | Project |
+| Item | GitHub Issue | Manager |
 |---|---:|---|
-| manager1 | #7 | @sunggyu-kim's 7iter project |
-| manager2 | #8 | @sunggyu-kim's 7iter project |
-| manager3 | #9 | @sunggyu-kim's 7iter project |
-| manager4 | #10 | @sunggyu-kim's 7iter project |
+| Item 1 | #1 | Overall Manager |
+| Item 1-1 | #5 | Overall Manager |
+| Item 2 | #2 | Overall Manager |
+| Item 3 | #3 | Overall Manager |
+| Item 3-1 | #6 | Overall Manager |
+| Item 4 | #4 | Overall Manager |
+
+## Rule
+One manager finds, organizes, and synchronizes all item branches. Do not create per-item manager roles unless the representative explicitly requests separate human/agent managers later.

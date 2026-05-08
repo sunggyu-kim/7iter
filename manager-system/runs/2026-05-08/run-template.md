@@ -1,6 +1,7 @@
-# 2026-05-08 Manager Bootstrap Run
+# 2026-05-08 Manager Correction Run
 
-- item1-agent: Item 1-1 fork spec
-- item2-agent: SOUL module spec
-- item3-agent: jellyfish asset spec
-- manager-agent: manager-system spec
+## Correction
+The intended model is one overall manager for Item 1~4 and all forked items, not manager1~4 split by item.
+
+## External LLM logging
+Per-LLM markdown files were removed. External/local LLM work is tracked as date-based log entries under `manager-system/external-llm-logs/`.

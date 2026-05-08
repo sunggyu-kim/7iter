@@ -2,6 +2,9 @@
 
 - Repo: `sunggyu-kim/7iter`
 - Issue: #1
-- Manager: manager1
+- Manager: Overall Manager
 - Public URL: https://sunggyu-kim.github.io/7iter/item1/
-- Labels: `manager:1`, `async-managed`
+- Labels: `manager`, `async-managed`
+
+## Manager Issue
+- #11

@@ -150,9 +150,14 @@ Issue #1 최신 comment에 따라 Drive 이미지가 아니라 라벨링된 공�
 
 ## 2026-05-08 Manager System Update
 
-- Added repo-native `manager-system/` for manager1~4.
-- manager1 owns Item 1 and new Item 1-1 Semantic Object Mosaic Lab.
-- manager2 owns Item 2 hardware capsule and SOUL modules.
-- manager3 owns Item 3 and Item 3-1 jellyfish card.
-- manager4 owns Item 4 hologram card.
+- Corrected repo-native `manager-system/` to one Overall Manager.
+- One Overall Manager owns Item 1~4 and all forked items, including Item 1-1 and Item 3-1.
+- External/local LLM work is tracked through date-based log files under `manager-system/external-llm-logs/`, not per-LLM markdown files.
 - Added per-item CONTEXT/HISTORY/STATUS/JOBS/GITHUB records for async updates across OpenClaw, local Codex, Gemini, Claude/OpenAI/Grok, and future 3D tools.
+
+
+## 2026-05-08 Manager System Correction
+- Corrected misunderstanding: one Overall Manager controls all items/forks.
+- Removed per-LLM docs and per-item manager1~4 directories.
+- Added `manager-system/external-llm-logs/` for local Codex/OpenClaw/Gemini/etc update traces.
+- Retired GitHub issues #7~#10; use Overall Manager issue #11.

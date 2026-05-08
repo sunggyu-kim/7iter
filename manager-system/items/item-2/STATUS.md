@@ -1,7 +1,7 @@
 # Reactive Keyboard Goods Status
 
 ## Current State
-Registered under `manager2`.
+Registered under `Overall Manager`.
 
 ## Latest Visible URL
 - https://sunggyu-kim.github.io/7iter/item2/

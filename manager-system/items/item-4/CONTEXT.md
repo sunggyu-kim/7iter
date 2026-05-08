@@ -18,7 +18,10 @@ Keep project context persistent across OpenClaw, local Codex, Gemini, Claude, Op
 - #4
 
 ## Manager
-- manager4
+- Overall Manager
 
 ## Next Best Action
 Keep visible demo and markdown context synchronized with GitHub Project status.
+
+## Manager Issue
+- #11

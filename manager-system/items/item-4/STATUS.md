@@ -1,7 +1,7 @@
 # Hologram Business Card Status
 
 ## Current State
-Registered under `manager4`.
+Registered under `Overall Manager`.
 
 ## Latest Visible URL
 - https://sunggyu-kim.github.io/7iter/item4/
