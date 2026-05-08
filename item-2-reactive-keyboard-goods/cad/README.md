@@ -1,22 +1,13 @@
-# SG90 Clicker Mount CAD v0.1
+# SG90 Hardware Capsule v0.2
 
-## Files
-- `sg90_clicker_mount_v0_1.scad` — OpenSCAD parametric CAD source
-- `sg90_clicker_mount_preview_v0_1.stl` — rough printable/preview mesh generated from the layout
-- `sg90-clicker-mount-dimensions.svg` — top/side dimension reference
-- `assembly-render.svg` — visual assembly concept
-- `ASSEMBLY_WIRING_NOTES.md` — assembly/wire-routing checklist without changing the CAD draft
-- `wiring-sg90-esp32c3.svg` — SG90/ESP32-C3 wiring reference
+- SG90 micro servo is placed above the ESP32-C3 SuperMini.
+- ESP32-C3, headers, USB-C connector, chip/button/antenna and 3-wire routing are represented in the SCAD reference assembly.
+- Cover hides hardware and wiring while exposing only the front USB-C slot and the top servo drive window.
+- Soul is intentionally not modeled. The top interface socket is left for future interchangeable interactive items.
 
-## Purchased parts reflected
-- MicroServo 9g SG90
-- USB/WiFi ESP32-C3 SuperMini
-
-## Intended mechanism
-The SG90 sits in a vertical cradle. A short servo horn/lever presses a target key or plunger. The ESP32-C3 receives the completion signal and drives LED + servo.
-
-## Print notes
-- Units: millimeters
-- Base: 90 × 70 × 3 mm
-- Verify SG90 body/tab/hole dimensions before final print
-- Verify exact ESP32-C3 SuperMini board dimensions and USB connector direction before final print
+Files:
+- `sg90_clicker_mount_v0_1.scad` — parametric source, v0.2 capsule
+- `assembly-render.svg` — review render
+- `sg90-clicker-mount-dimensions.svg` — dimension review
+- `sg90_hardware_capsule_base_v0_2.stl`
+- `sg90_hardware_capsule_cover_v0_2.stl`

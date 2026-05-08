@@ -1,0 +1,16 @@
+solid sg90_hardware_capsule_base_v0_2
+ facet normal 0 0 1
+  outer loop
+   vertex 0 0 26
+   vertex 58 0 26
+   vertex 58 34 26
+  endloop
+ endfacet
+ facet normal 0 0 1
+  outer loop
+   vertex 0 0 26
+   vertex 58 34 26
+   vertex 0 34 26
+  endloop
+ endfacet
+endsolid sg90_hardware_capsule_base_v0_2

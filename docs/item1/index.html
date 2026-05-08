@@ -44,6 +44,21 @@
   </section>
 
 
+
+  <section class="split">
+    <div class="panel">
+      <h2>Round 5: image-tile semantic target</h2>
+      <img class="shot" src="assets/coco-style-animal-semantic-target.jpg" alt="Object-only animal semantic target with null background" />
+      <p>정정 반영: object 영역과 NULL/background 영역 모두 단순 색상 block이 아니라 이미지 tile로 채우도록 바꿨습니다. Target은 COCO 방식의 segmentation/object-first 구조를 기준으로 분리합니다.</p>
+    </div>
+    <div class="panel">
+      <h2>All cells filled by images</h2>
+      <img class="shot" src="assets/real-image-null-background-animal-mosaic.jpg" alt="Real image tile mosaic with white-dominant background image tiles" />
+      <p>NULL 영역도 비워두거나 흰색 사각형으로 칠하지 않고, 흰색 영역이 많은 이미지 tile 후보군으로 채웠습니다. Object 영역은 후처리된 target mask/histogram 기준으로 어두운/고대비 이미지 tile을 재선별합니다.</p>
+      <p><a href="assets/real-image-null-background-mosaic-report.json">Open Round 5 report JSON</a></p>
+    </div>
+  </section>
+
   <section class="split">
     <div class="panel">
       <h2>Round 4: object-first target</h2>
