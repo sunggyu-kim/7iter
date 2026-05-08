@@ -9,3 +9,6 @@ Item 2 hardware capsule and SOUL modules
 - Coordinate local async agents.
 - Sync reviewed summaries to GitHub Issues/Project.
 - Keep public Pages review routes working.
+
+## GitHub Manager Issue
+- #8

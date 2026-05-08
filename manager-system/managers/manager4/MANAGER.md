@@ -9,3 +9,6 @@ Item 4 hologram business card
 - Coordinate local async agents.
 - Sync reviewed summaries to GitHub Issues/Project.
 - Keep public Pages review routes working.
+
+## GitHub Manager Issue
+- #10

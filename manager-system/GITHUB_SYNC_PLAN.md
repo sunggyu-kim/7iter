@@ -7,8 +7,8 @@
 - #4 → manager4 / item-4
 
 ## New fork mapping
-- Item 1-1 → manager1 / new issue
-- Item 3-1 → manager3 / new issue
+- Item 1-1 → manager1 / #5
+- Item 3-1 → manager3 / #6
 
 ## Labels
 - `manager:1`, `manager:2`, `manager:3`, `manager:4`

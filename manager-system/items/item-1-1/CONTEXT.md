@@ -15,7 +15,7 @@ Keep project context persistent across OpenClaw, local Codex, Gemini, Claude, Op
 - https://sunggyu-kim.github.io/7iter/item1-1/
 
 ## GitHub Issue
-- new issue
+- #5
 
 ## Manager
 - manager1
