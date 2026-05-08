@@ -71,3 +71,13 @@ Issue #1 최신 comment에 따라 Drive 이미지가 아니라 라벨링된 공�
   - KOR/ENG language toggle
   - CSS 3D transform/parallax/layered glare
   - hidden Weakness/Resistance/Retreat Cost reveal
+
+
+## 2026-05-08 Manager System Update
+
+- Added repo-native `manager-system/` for manager1~4.
+- manager1 owns Item 1 and new Item 1-1 Semantic Object Mosaic Lab.
+- manager2 owns Item 2 hardware capsule and SOUL modules.
+- manager3 owns Item 3 and Item 3-1 jellyfish card.
+- manager4 owns Item 4 hologram card.
+- Added per-item CONTEXT/HISTORY/STATUS/JOBS/GITHUB records for async updates across OpenClaw, local Codex, Gemini, Claude/OpenAI/Grok, and future 3D tools.

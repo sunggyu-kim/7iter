@@ -1,0 +1,10 @@
+{
+  "dataset_policy": "MS COCO recommended for production; this page demonstrates the corrected algorithm with real image tiles from the existing public Imagenette-derived tile sheet until COCO is downloaded in the build pipeline.",
+  "object_fill": "object area filled only with image tiles, not flat colors",
+  "null_fill": "NULL/background area filled with light/white-dominant image tiles, not empty color blocks",
+  "selection": "post-processed target mask separates object/background; tile candidates are separated by brightness/saturation",
+  "outputs": [
+    "coco-style-animal-semantic-target.jpg",
+    "real-image-null-background-animal-mosaic.jpg"
+  ]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360">
+<rect width="620" height="360" rx="34" fill="#07111f"/>
+<text x="34" y="54" fill="#f8fafc" font-family="Inter,Arial" font-size="28" font-weight="900">Gemini Twin Spark</text>
+<g transform="translate(0 10)" fill="#22d3ee" stroke="#22d3ee" opacity=".92"><polygon points="250,85 280,145 250,205 220,145"/><polygon points="330,85 360,145 330,205 300,145"/></g>
+<circle cx="290" cy="262" r="52" fill="#111827" stroke="#475569" stroke-width="8"/><circle cx="290" cy="262" r="28" fill="#020617" stroke="#64748b" stroke-width="4"/><circle cx="290" cy="262" r="7" fill="#e5e7eb"/>
+<text x="34" y="320" fill="#94a3b8" font-family="Inter,Arial" font-size="16">SG90 horn-compatible removable SOUL module · adapter Ø24/Ø16 reference</text>
+</svg>

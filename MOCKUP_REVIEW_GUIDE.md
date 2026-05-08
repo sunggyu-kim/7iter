@@ -21,3 +21,13 @@
 - 각 issue에 이번 변경사항을 comment로 남긴다.
 - Project status는 대표 검토가 가능한 상태인 `In review`로 옮긴다.
 - Priority는 빠른 검증/사업 임팩트 기준으로 조정한다.
+
+
+## 2026-05-08 Manager System Update
+
+- Added repo-native `manager-system/` for manager1~4.
+- manager1 owns Item 1 and new Item 1-1 Semantic Object Mosaic Lab.
+- manager2 owns Item 2 hardware capsule and SOUL modules.
+- manager3 owns Item 3 and Item 3-1 jellyfish card.
+- manager4 owns Item 4 hologram card.
+- Added per-item CONTEXT/HISTORY/STATUS/JOBS/GITHUB records for async updates across OpenClaw, local Codex, Gemini, Claude/OpenAI/Grok, and future 3D tools.
