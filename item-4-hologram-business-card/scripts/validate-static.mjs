@@ -18,8 +18,8 @@ const required = [
   'requestAnimationFrame',
   'conic-gradient',
   'Weakness',
-  'Resistance',
-  'Retreat Cost',
+  'Defense Mechanism',
+  '방어기제',
   'GitHub Pages / Vercel'
 ];
 for (const token of required) if (!html.includes(token)) throw new Error(`Missing token: ${token}`);

@@ -14,3 +14,5 @@ Representative should use the visible URL and issue comment summaries.
 
 ## Recommended Next Action
 Continue async updates through manager queue and append HISTORY.md.
+## 2026-05-08 16:06 Update
+Item 1 page removes obsolete Round4 block and points object-first work to Item 1-1.

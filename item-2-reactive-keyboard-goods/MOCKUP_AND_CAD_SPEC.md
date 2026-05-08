@@ -7,7 +7,7 @@
 ## 이번 정교화
 - `docs/index.html`에 SG90 clicker mock section 추가
 - `cad/sg90_clicker_mount_v0_1.scad` 작성
-- `cad/sg90_clicker_mount_preview_v0_1.stl` 작성
+- STL preview generation deferred until dimensional validation; previous placeholder STL removed.
 - `cad/sg90-clicker-mount-dimensions.svg` 작성
 - `cad/assembly-render.svg` 작성
 

@@ -1,10 +1,14 @@
 {
-  "dataset_policy": "MS COCO recommended for production; this page demonstrates the corrected algorithm with real image tiles from the existing public Imagenette-derived tile sheet until COCO is downloaded in the build pipeline.",
-  "object_fill": "object area filled only with image tiles, not flat colors",
-  "null_fill": "NULL/background area filled with light/white-dominant image tiles, not empty color blocks",
-  "selection": "post-processed target mask separates object/background; tile candidates are separated by brightness/saturation",
-  "outputs": [
-    "coco-style-animal-semantic-target.jpg",
-    "real-image-null-background-animal-mosaic.jpg"
+  "standard_image": "Asian tabby cat transparent.png",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Asian_tabby_cat_transparent.png",
+  "source_repository": "Wikimedia Commons public file API/search result",
+  "cell_policy": "all cells are image tiles; no blank solid color cells",
+  "background_policy": "background/NULL cells selected from high-white/high-brightness real image tiles",
+  "object_cells": 311,
+  "background_cells": 1561,
+  "limitations": [
+    "tile pool is still small",
+    "no real COCO/SAM segmentation run in this lightweight static demo",
+    "mild brightness correction used for readability"
   ]
 }

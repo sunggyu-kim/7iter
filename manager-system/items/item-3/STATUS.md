@@ -14,3 +14,5 @@ Representative should use the visible URL and issue comment summaries.
 
 ## Recommended Next Action
 Continue async updates through manager queue and append HISTORY.md.
+## 2026-05-08 16:06 Update
+Item 3 request is merged with Item 3-1 to avoid duplicate jellyfish work.

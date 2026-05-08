@@ -14,3 +14,5 @@ Representative should use the visible URL and issue comment summaries.
 
 ## Recommended Next Action
 Continue async updates through manager queue and append HISTORY.md.
+## 2026-05-08 16:06 Update
+Item 4 removes Retreat Cost, changes Resistance to 방어기제, and adds GPT/revenue pipeline plan.

@@ -106,7 +106,7 @@ pio device monitor -b 115200</pre>
       <p>
         <a class="btn dark" href="assets/assembly-render.svg">Assembly render</a>
         <a class="btn" href="assets/sg90-clicker-mount-dimensions.svg">Dimensions SVG</a>
-        <a class="btn" href="assets/sg90_clicker_mount_preview_v0_1.stl">STL preview</a><a class="btn dark" href="assets/sg90_hardware_capsule_base_v0_2.stl">Base STL v0.2</a><a class="btn" href="assets/sg90_hardware_capsule_cover_v0_2.stl">Cover STL v0.2</a>
+        <span class="pill">STL placeholders removed · export from latest SCAD after dimensional check</span>
       </p>
     </article>
 
@@ -136,6 +136,16 @@ pio device monitor -b 115200</pre>
       <div><img class="shot" src="assets/soul-openclaw-preview.svg" alt="OpenClaw soul"/></div>
     </div>
     <p><a class="btn dark" href="assets/sg90_soul_modules_v0_1.scad">Open SOUL SCAD</a></p>
+  </section>
+
+
+  <section class="panel" id="sw-signal" style="margin-top:18px">
+    <h2>9. SW signal capture · inference start/done</h2>
+    <p>OpenClaw/Linux에서는 local webhook 방식으로 inference start/done 신호 수신을 테스트했습니다. Codex/Mac 등 다른 환경은 같은 host/port contract로 wrapper를 붙여 검증합니다.</p>
+    <pre>python3 item-2-reactive-keyboard-goods/software/inference_signal_server.py --host 127.0.0.1 --port 8765
+python3 item-2-reactive-keyboard-goods/software/inference_signal_client.py --event start --source openclaw-test
+python3 item-2-reactive-keyboard-goods/software/inference_signal_client.py --event done --source openclaw-test</pre>
+    <p><a class="btn dark" href="../assets/item2-sw-signal-test-plan.md">Open SW signal test plan</a></p>
   </section>
 
   <section class="footer">Round5 hardware capsule: SG90 아래 ESP32-C3 SuperMini를 배치하고 cover로 electronics/wiring을 숨기며 USB-C slot과 servo drive window만 노출합니다. Soul은 추후 interchangeable item으로 만들 수 있도록 socket만 남겼습니다. Round4 link audit: all buttons and embedded CAD/SVG/STL links now stay under docs/item2/assets to avoid GitHub Pages 404. Round2 upgrade: 이 페이지는 부품 → 배선 → Mac 설치 → firmware upload → serial command 테스트 → CAD/트러블슈팅을 한 화면에 묶어 웹 브라우저에서 바로 확인할 수 있게 만든 대표 검토용 guide입니다.</section>

@@ -15,7 +15,7 @@ GitHub Pages는 repository root가 아니라 `/docs`를 publish root로 쓰고 �
 - `/item2/assets/wiring-sg90-esp32c3.svg`
 - `/item2/assets/assembly-render.svg`
 - `/item2/assets/sg90-clicker-mount-dimensions.svg`
-- `/item2/assets/sg90_clicker_mount_preview_v0_1.stl`
+- STL placeholder URL removed in Round 7; export from latest SCAD after dimensional validation.
 - `/item2/assets/sg90_clicker_mock.ino`
 - `/item2/assets/sg90_clicker_mount_v0_1.scad`
 - `/assets/item2-wiring-and-setup.md`

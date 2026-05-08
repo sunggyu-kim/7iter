@@ -9,5 +9,4 @@ Files:
 - `sg90_clicker_mount_v0_1.scad` — parametric source, v0.2 capsule
 - `assembly-render.svg` — review render
 - `sg90-clicker-mount-dimensions.svg` — dimension review
-- `sg90_hardware_capsule_base_v0_2.stl`
-- `sg90_hardware_capsule_cover_v0_2.stl`
+- STL export is intentionally removed from the public review path until dimensional validation is complete.
