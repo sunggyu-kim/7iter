@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#1f2937"/></linearGradient>
+  <linearGradient id="led" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="960" height="600" rx="38" fill="url(#bg)"/>
+<text x="56" y="68" font-family="Inter, Arial" font-size="25" fill="#fff" opacity=".88">Item 2 — SG90 clicker macro pad mock</text>
+<g transform="translate(120 150)">
+  <rect x="0" y="175" width="700" height="170" rx="36" fill="#0b1220" stroke="#334155" stroke-width="3"/>
+  <rect x="62" y="218" width="92" height="82" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <rect x="178" y="218" width="92" height="82" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <rect x="294" y="218" width="92" height="82" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <rect x="410" y="218" width="92" height="82" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <rect x="526" y="218" width="92" height="82" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <rect x="75" y="233" width="66" height="12" rx="6" fill="url(#led)" filter="url(#glow)"/>
+  <rect x="191" y="233" width="66" height="12" rx="6" fill="url(#led)" filter="url(#glow)" opacity=".82"/>
+  <rect x="307" y="233" width="66" height="12" rx="6" fill="url(#led)" filter="url(#glow)" opacity=".62"/>
+  <rect x="423" y="233" width="66" height="12" rx="6" fill="url(#led)" filter="url(#glow)" opacity=".44"/>
+  <rect x="540" y="233" width="66" height="12" rx="6" fill="url(#led)" filter="url(#glow)" opacity=".25"/>
+  <g transform="translate(450 0)">
+    <rect x="0" y="42" width="96" height="132" rx="13" fill="#2563eb" stroke="#93c5fd" stroke-width="3"/>
+    <text x="48" y="118" text-anchor="middle" font-family="Inter, Arial" font-size="22" font-weight="800" fill="#fff">SG90</text>
+    <circle cx="48" cy="42" r="22" fill="#e5e7eb" stroke="#94a3b8" stroke-width="3"/>
+    <rect x="42" y="-2" width="12" height="150" rx="6" fill="#f8fafc" transform="rotate(54 48 42)"/>
+    <circle cx="48" cy="42" r="7" fill="#0f172a"/>
+    <rect x="96" y="88" width="120" height="32" rx="16" fill="#e5e7eb" transform="rotate(0 96 88)"/>
+    <rect x="190" y="105" width="60" height="28" rx="10" fill="#f97316"/>
+    <text x="220" y="96" text-anchor="middle" font-family="Inter, Arial" font-size="15" fill="#fff">click pad</text>
+  </g>
+  <g transform="translate(60 52)">
+    <rect x="0" y="0" width="154" height="86" rx="16" fill="#052e2b" stroke="#2dd4bf" stroke-width="3"/>
+    <rect x="12" y="16" width="35" height="20" rx="4" fill="#94a3b8"/>
+    <circle cx="128" cy="18" r="7" fill="#34d399"/>
+    <circle cx="128" cy="42" r="7" fill="#22d3ee"/>
+    <text x="77" y="57" text-anchor="middle" font-family="Inter, Arial" font-size="18" font-weight="800" fill="#ccfbf1">ESP32-C3</text>
+  </g>
+  <path d="M210 94 C320 80, 390 50, 448 72" fill="none" stroke="#67e8f9" stroke-width="5" opacity=".55" stroke-dasharray="10 12"/>
+</g>
+<text x="120" y="535" font-family="Inter, Arial" font-size="22" fill="#cbd5e1">Purchased: MicroServo 9g SG90 + ESP32-C3 SuperMini. MVP: servo press + LED completion animation.</text>
+</svg>

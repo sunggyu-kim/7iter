@@ -1,0 +1,6 @@
+{
+  "target": "animal/cat silhouette review target",
+  "background_policy": "null/transparent; fill background cells with white/black only",
+  "tile_policy": "select candidates after checking post-processed object color histogram",
+  "improvement": "object shape preserved better than full-frame church target"
+}

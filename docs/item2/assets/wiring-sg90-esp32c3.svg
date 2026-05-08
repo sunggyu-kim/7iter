@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+  <rect width="100%" height="100%" fill="#fbfbf8"/>
+  <style>
+    .box{fill:#fff;stroke:#222;stroke-width:3;rx:16;ry:16}
+    .label{font-family:Arial, sans-serif;font-size:24px;fill:#111;font-weight:700}
+    .small{font-family:Arial, sans-serif;font-size:18px;fill:#222}
+    .pin{font-family:Arial, sans-serif;font-size:17px;fill:#111}
+    .sig{stroke:#f4a000;stroke-width:8;fill:none;stroke-linecap:round}
+    .gnd{stroke:#5b3a20;stroke-width:8;fill:none;stroke-linecap:round}
+    .vcc{stroke:#d12b2b;stroke-width:8;fill:none;stroke-linecap:round}
+    .usb{stroke:#5a7bd8;stroke-width:8;fill:none;stroke-linecap:round;stroke-dasharray:14 10}
+  </style>
+
+  <rect class="box" x="90" y="105" width="260" height="320"/>
+  <text class="label" x="125" y="150">ESP32-C3 SuperMini</text>
+  <text class="small" x="125" y="183">Mac USB powers MCU</text>
+  <circle cx="350" cy="245" r="8" fill="#f4a000"/><text class="pin" x="225" y="251">GPIO4 servo signal</text>
+  <circle cx="350" cy="315" r="8" fill="#5b3a20"/><text class="pin" x="260" y="321">GND</text>
+  <circle cx="350" cy="375" r="8" fill="#444"/><text class="pin" x="178" y="381">GPIO10 optional LED</text>
+
+  <rect class="box" x="650" y="120" width="230" height="190"/>
+  <text class="label" x="710" y="160">SG90</text>
+  <text class="small" x="695" y="190">micro servo</text>
+  <circle cx="650" cy="225" r="8" fill="#f4a000"/><text class="pin" x="675" y="231">Orange/Yellow Signal</text>
+  <circle cx="650" cy="260" r="8" fill="#d12b2b"/><text class="pin" x="675" y="266">Red +5V</text>
+  <circle cx="650" cy="295" r="8" fill="#5b3a20"/><text class="pin" x="675" y="301">Brown/Black GND</text>
+
+  <rect class="box" x="650" y="375" width="230" height="95"/>
+  <text class="label" x="700" y="415">5V supply</text>
+  <text class="small" x="692" y="445">1A recommended</text>
+
+  <path class="sig" d="M350 245 C455 245 530 225 650 225"/>
+  <path class="vcc" d="M765 375 L765 260 L650 260"/>
+  <path class="gnd" d="M650 295 C565 330 470 330 350 315"/>
+  <path class="gnd" d="M765 375 L765 335 C735 335 690 315 650 295"/>
+  <path class="usb" d="M90 185 C45 185 35 185 20 185"/>
+  <text class="small" x="23" y="162">to Mac USB-C</text>
+
+  <rect x="420" y="420" width="30" height="30" fill="#ffe066" stroke="#222" stroke-width="2"/>
+  <text class="small" x="465" y="442">Optional LED: GPIO10 → resistor → LED → GND</text>
+  <text class="small" x="95" y="500">Important: SG90 red wire does NOT go to ESP32-C3 3V3. Only signal + common GND connect between MCU and servo power.</text>
+</svg>
