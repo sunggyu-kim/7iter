@@ -1,0 +1,98 @@
+{
+  "INFP": {
+    "type": "Fairy",
+    "emoji": "🧚",
+    "tone": "감성적 이상주의자",
+    "prompt": "soft fairy-like animal hero, dreamy pastel illustration, no text"
+  },
+  "INFJ": {
+    "type": "Psychic",
+    "emoji": "🔮",
+    "tone": "통찰과 신비",
+    "prompt": "mystic fox/deer animal hero, psychic aura, no text"
+  },
+  "INTJ": {
+    "type": "Dragon",
+    "emoji": "🐉",
+    "tone": "전략형 압도감",
+    "prompt": "small dragon strategist animal hero, premium illustration, no text"
+  },
+  "INTP": {
+    "type": "Electric",
+    "emoji": "⚡",
+    "tone": "번뜩이는 발상",
+    "prompt": "electric raccoon inventor animal hero, no text"
+  },
+  "ISFP": {
+    "type": "Grass",
+    "emoji": "🌿",
+    "tone": "조용한 자유로움",
+    "prompt": "gentle forest cat animal hero, grass aura, no text"
+  },
+  "ISFJ": {
+    "type": "Water",
+    "emoji": "💧",
+    "tone": "안정적 배려",
+    "prompt": "calm otter guardian animal hero, water aura, no text"
+  },
+  "ISTJ": {
+    "type": "Steel",
+    "emoji": "🛡️",
+    "tone": "규칙과 신뢰",
+    "prompt": "steel badger guardian animal hero, no text"
+  },
+  "ISTP": {
+    "type": "Rock",
+    "emoji": "🪨",
+    "tone": "실전형 침착함",
+    "prompt": "rock armadillo mechanic animal hero, no text"
+  },
+  "ENFP": {
+    "type": "Fire",
+    "emoji": "🔥",
+    "tone": "분위기 점화",
+    "prompt": "fire puppy performer animal hero, energetic, no text"
+  },
+  "ENFJ": {
+    "type": "Flying",
+    "emoji": "🪽",
+    "tone": "이끄는 존재감",
+    "prompt": "winged lion/rabbit leader animal hero, no text"
+  },
+  "ENTJ": {
+    "type": "Fighting",
+    "emoji": "🥊",
+    "tone": "추진력과 정면돌파",
+    "prompt": "fighting tiger commander animal hero, no text"
+  },
+  "ENTP": {
+    "type": "Ghost",
+    "emoji": "👻",
+    "tone": "룰을 비트는 장난기",
+    "prompt": "ghost fox trickster animal hero, no text"
+  },
+  "ESFP": {
+    "type": "Normal",
+    "emoji": "⭐",
+    "tone": "친화력과 무대감",
+    "prompt": "star hamster entertainer animal hero, no text"
+  },
+  "ESFJ": {
+    "type": "Ice",
+    "emoji": "❄️",
+    "tone": "단정하고 섬세",
+    "prompt": "ice swan/rabbit caretaker animal hero, no text"
+  },
+  "ESTP": {
+    "type": "Dark",
+    "emoji": "🌑",
+    "tone": "스릴과 순간판단",
+    "prompt": "dark panther adventurer animal hero, no text"
+  },
+  "ESTJ": {
+    "type": "Ground",
+    "emoji": "⛰️",
+    "tone": "현실적 운영력",
+    "prompt": "ground bull/boar organizer animal hero, no text"
+  }
+}

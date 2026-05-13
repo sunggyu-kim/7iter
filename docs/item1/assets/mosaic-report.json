@@ -1,0 +1,14 @@
+{
+  "standard_image": "Asian tabby cat transparent.png",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Asian_tabby_cat_transparent.png",
+  "source_repository": "Wikimedia Commons public file API/search result",
+  "cell_policy": "all cells are image tiles; no blank solid color cells",
+  "background_policy": "background/NULL cells selected from high-white/high-brightness real image tiles",
+  "object_cells": 311,
+  "background_cells": 1561,
+  "limitations": [
+    "tile pool is still small",
+    "no real COCO/SAM segmentation run in this lightweight static demo",
+    "mild brightness correction used for readability"
+  ]
+}

@@ -24,3 +24,10 @@ Overall Manager must inspect GitHub instructions first, then merge duplicated us
 
 ## Subagent rule
 If a subagent is later used, pass this file plus the relevant item CONTEXT/HISTORY. Subagents must not separately redo #1/#5 or #3/#6.
+
+
+## 2026-05-13 GitHub comment sync
+- #1 old Item 1 closed/archived.
+- #5 Item 1-1 becomes active Item 1 main.
+- #2 receives HW multi-version/SW QA plan.
+- #4 Scenario 1 is split to new Item 4-1 MBTI card task.

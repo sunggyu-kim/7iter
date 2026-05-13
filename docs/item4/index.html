@@ -100,5 +100,5 @@ $('photoInput').addEventListener('input',e=>{const raw=e.target.value.trim();if(
 $('autoTilt').addEventListener('click',e=>{auto=!auto;e.currentTarget.classList.toggle('active',auto);$('toast').textContent=auto?'자동 틸트 활성화':'자동 틸트 정지';$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1100);const start=performance.now();function loop(t){if(!auto)return;const k=(t-start)/1000;applyTilt(.5+Math.cos(k*.9)*.36,.45+Math.sin(k*1.15)*.31);raf=requestAnimationFrame(loop)}if(auto)raf=requestAnimationFrame(loop)});
 setLang('ko');setPlain();syncBody();applyTilt(.5,.44);
 </script>
-</body>
+<p style="padding:20px"><a href="../item4-1/">Open Item 4-1 MBTI 8-question card generator</a></p></body>
 </html>

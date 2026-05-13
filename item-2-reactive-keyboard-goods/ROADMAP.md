@@ -15,3 +15,7 @@
 - Use accurate SG90 dimensional references.
 - Rebuild printable base/cover STL from latest SCAD.
 - Verify horn clearance, USB-C access, and SOUL socket tolerance.
+
+
+## 2026-05-13 QA update
+- Added one-hardware / multi-version HW+SW validation plan: `item-2-reactive-keyboard-goods/HW_MULTI_VERSION_SW_QA_PLAN.md`.
