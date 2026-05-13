@@ -31,3 +31,5 @@ If a subagent is later used, pass this file plus the relevant item CONTEXT/HISTO
 - #5 Item 1-1 becomes active Item 1 main.
 - #2 receives HW multi-version/SW QA plan.
 - #4 Scenario 1 is split to new Item 4-1 MBTI card task.
+
+- #12 Item 4-1 created for MBTI 8-question card generator.

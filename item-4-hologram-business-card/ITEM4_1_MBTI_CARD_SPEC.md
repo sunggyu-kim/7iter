@@ -15,5 +15,5 @@ GitHub issue #4 latest comment is split into new managed task **Item 4-1**.
 - Public mock: `docs/item4-1/index.html`
 
 ## Managed as
-- GitHub issue: Item 4-1
+- GitHub issue: #12 Item 4-1
 - Parent context: #4 Item 4 Hologram Business Card
