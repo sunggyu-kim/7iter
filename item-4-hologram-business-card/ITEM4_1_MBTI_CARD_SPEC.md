@@ -17,3 +17,7 @@ GitHub issue #4 latest comment is split into new managed task **Item 4-1**.
 ## Managed as
 - GitHub issue: #12 Item 4-1
 - Parent context: #4 Item 4 Hologram Business Card
+
+## API Connection Plan
+- Orchestration/API map: `ITEM4_1_API_ORCHESTRATION_MAP.md`
+- Recommended first implementation: deterministic scoring API + GPT structured JSON card generator + optional async image queue.

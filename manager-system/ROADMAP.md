@@ -14,3 +14,10 @@
 - Work stream A: photo + MBTI → GPT-derived attack/ability/weakness/defense mechanism.
 - Work stream B: name + birthday → 사주 prompt + character activation + card traits.
 - Output: service pipeline, prompts, platform/revenue report.
+
+## 2026-05-14 ~ 2026-05-16 — Item 4-1 API orchestration and mock backend
+- Goal: connect the MBTI 8-question static mock to a real API/GPT-ready architecture.
+- Work stream A: stage-by-stage app/API map in n8n-style nodes.
+- Work stream B: local mock API for answer submit → MBTI score → card JSON.
+- Work stream C: GPT structured JSON prompt and safety filter validation.
+- Output: `ITEM4_1_API_ORCHESTRATION_MAP.md`, then mock API prototype.
